@@ -1,0 +1,76 @@
+/* styles.css */
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a; /* Dark blue-gray background color */
+  color: #fff; /* White text color */
+  font-family: Arial, sans-serif; /* Font family */
+}
+
+#message-container {
+  width: 80%;
+  max-width: 600px; /* Limiting container width */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Shadow effect */
+}
+
+#message-container div {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light gray border between messages */
+  word-wrap: break-word; /* Wrap long words */
+}
+
+#message-container div:last-child {
+  border-bottom: none; /* Remove border from last message */
+}
+
+#send-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px; /* Limiting container width */
+  width: calc(80% - 20px); /* Adjusting width with padding */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Shadow effect */
+  display: flex;
+  align-items: center;
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Light gray border */
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent; /* Transparent background */
+  color: #fff; /* White text color */
+}
+
+#send-button {
+  padding: 8px 15px;
+  background-color: #007bff; /* Blue button color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
